@@ -60,8 +60,7 @@ __work_reporter::slack_status_to_start() {
   URL="$URL?token=$SLACK_API_TOKEN"
   URL="$URL&profile=%7B%22status_text%22%3A%22$STATUS_TEXT"
   URL="$URL%22%2C%22status_emoji%22%3A%22$EMOJI%22%7D"
-  echo $URL
-  curl -X POST "$URL" && true || false
+  curl -X POST "$URL" > /dev/null 2>&1 && true || false
 }
 __work_reporter::slack_status_to_end() {
   local URL="https://slack.com/api/users.profile.set"
@@ -70,8 +69,7 @@ __work_reporter::slack_status_to_end() {
   URL="$URL?token=$SLACK_API_TOKEN"
   URL="$URL&profile=%7B%22status_text%22%3A%22$STATUS_TEXT"
   URL="$URL%22%2C%22status_emoji%22%3A%22$EMOJI%22%7D"
-  echo $URL
-  curl -X POST "$URL" && true || false
+  curl -X POST "$URL" > /dev/null 2>&1 && true || false
 }
 
 __work_reporter::start() {
