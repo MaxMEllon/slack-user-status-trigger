@@ -83,7 +83,7 @@ __work_reporter::end() {
   printf "End working at " && date
   export __work_reporter_STATE="STOP"
   export __work_reporter_END_TIME=$(date +%s)
-  local diff=$(expr $__work_reporter_START_TIME - $__work_reporter_END_TIME)
+  local diff=$(expr $__work_reporter_END_TIME - $__work_reporter_START_TIME)
   local result=$(expr $diff / 60)
   printf "$result min\n"
   __work_reporter::slack_status_to_end && true || false
