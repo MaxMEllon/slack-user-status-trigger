@@ -16,7 +16,7 @@ Installation
 
 ```bash
 zplug 'maxmellon/slack-user-status-trigger', \
-    use:'(*.sh)', 
+    use:'(*.sh)', \
     rename-to:'$1'
 ```
 
