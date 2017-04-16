@@ -1,5 +1,10 @@
 # slack-user-status-trigger
 
+Demo
+---
+
+![demo image](https://raw.githubusercontent.com/MaxMEllon/demos/master/slack-user-status-trigger/demo.gif)
+
 Usage
 ---
 
