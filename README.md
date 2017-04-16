@@ -25,6 +25,13 @@ zplug 'maxmellon/slack-user-status-trigger', \
     rename-to:'$1'
 ```
 
+- manual install
+
+```bash
+$ git clone git@github.com:MaxMEllon/slack-user-status-trigger.git /path/to/slack-user-status-trigger
+$ source /path/to/slack-user-status-trigger/work-reporter.sh
+```
+
 Configurations
 ---
 
